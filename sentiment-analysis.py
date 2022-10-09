@@ -57,3 +57,4 @@ saved_clf.score(x_test, y_test)
 test = ["SIUUUUUUUUU"]
 X_test=tfidf.transform(test)
 saved_clf.predict(X_test)
+
