@@ -26,3 +26,9 @@ tfidf = TfidfVectorizer(
     norm = '',
     smooth_idf = True
 )
+y = df.sentiment.values
+x = tfidf.fit_transform(df['review'].values.astype('U'))
+
+from sklearn.model_selection import train_test_split
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1,test_size = 0.5, shuffle = 'False')
